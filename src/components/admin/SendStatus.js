@@ -55,7 +55,7 @@ function SendStatus() {
 
         try {
           const response = await axios.put('https://job-posting-eight.vercel.app/application/add-status' ,submitStatusForm); // Replace with your backend API endpoint
-          setApplication(response.data);
+          console.log(response.data)
           setMessage('successfully sent') // Set the retrieved jobs data in the state
       } catch (error) {
           console.error('Error fetching jobs:', error);
