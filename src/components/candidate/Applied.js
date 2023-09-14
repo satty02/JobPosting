@@ -17,7 +17,7 @@ function Applied() {
 
     const fetchJobs = async () => {
         try {
-            const response = await axios.get(`http://localhost:8080/application/applied-candidate/${user}`); // Replace with your backend API endpoint
+            const response = await axios.get(`https://job-posting-eight.vercel.app/application/applied-candidate/${user}`); // Replace with your backend API endpoint
             setCandidateData(response.data); // Set the retrieved jobs data in the state
         } catch (error) {
             console.error('Error fetching jobs:', error);

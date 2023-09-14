@@ -23,7 +23,6 @@ router.post('/admin/register' , async(req,res)=>{
 })
 
 router.post('/admin/login',async (req, res) => {
-  res.send('hello')
   const {username, password} = req.body;
   if (!username || !password) {
       return res.status(400).json({message: 'Username and password are required'});
@@ -78,7 +77,6 @@ router.post('/admin/add-jobs', async (req, res) => {
   });
 
   router.get('/admin/get-jobs', async (req, res) => {
-    res.send('hello')
     try {
       // get jobs based on the request data
       const getAllJobs = await Jobs.find({})

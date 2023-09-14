@@ -41,7 +41,7 @@ function CandidateLogin() {
             password: password
         }
         try {
-            const response = await axios.post('http://localhost:8080/instructor/login', formData);
+            const response = await axios.post('https://job-posting-eight.vercel.app/instructor/login', formData);
 
             if (response.status === 200) { // Login successful, you can handle the response here
                 setUserData(response.data);
@@ -81,7 +81,7 @@ function CandidateLogin() {
 
         const sentEmail = await recoveryEmail;
         try {
-            const response = await axios.get(`http://localhost:8080/candidate/find-candidate/${sentEmail}`);
+            const response = await axios.get(`https://job-posting-eight.vercel.app/candidate/find-candidate/${sentEmail}`);
 
             if (response.status === 200) { // Login successful, you can handle the response here
                 setRecoveryPassword(response.data);

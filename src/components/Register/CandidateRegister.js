@@ -37,7 +37,7 @@ function AdminRegister() {
 
         console.log(formData)
         try {
-            const response = await axios.post('http://localhost:8080/candidate/register', formData);
+            const response = await axios.post('https://job-posting-eight.vercel.app/candidate/register', formData);
 
             if (response.status === 200) { // Registration successful, you can handle the response here
                 setMessage('Candidate added successfully');

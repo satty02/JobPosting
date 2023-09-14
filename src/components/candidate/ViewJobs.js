@@ -27,7 +27,7 @@ function ViewJobs() {
 
     const fetchJobs = async () => {
         try {
-            const response = await axios.get('http://localhost:8080/admin/get-jobs'); // Replace with your backend API endpoint
+            const response = await axios.get('https://job-posting-eight.vercel.app/admin/get-jobs'); // Replace with your backend API endpoint
             setJobs(response.data); // Set the retrieved jobs data in the state
         } catch (error) {
             console.error('Error fetching jobs:', error);
@@ -71,7 +71,7 @@ function ViewJobs() {
         
         try {
           // Send a POST request to your backend API to add the application data to the database
-          const response = await axios.post('http://localhost:8080/upload', submitData , {
+          const response = await axios.post('https://job-posting-eight.vercel.app/upload', submitData , {
             headers:{
                 'Content-Type':'multipart/form-data'
             }

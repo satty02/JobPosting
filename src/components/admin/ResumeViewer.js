@@ -14,7 +14,7 @@ const ResumeViewer = ({id}) => {
     useEffect(() => {
       async function fetchPDF() {
         try {
-          const response = await axios.get(`http://localhost:8080/get-pdf/${id}`, {
+          const response = await axios.get(`https://job-posting-eight.vercel.app/get-pdf/${id}`, {
             responseType: 'arraybuffer',
           });
   

@@ -22,7 +22,7 @@ function SendStatus() {
 
     const fetchJobs = async () => {
         try {
-            const response = await axios.get('http://localhost:8080/application/Views'); // Replace with your backend API endpoint
+            const response = await axios.get('https://job-posting-eight.vercel.app/application/Views'); // Replace with your backend API endpoint
             setApplication(response.data); // Set the retrieved jobs data in the state
         } catch (error) {
             console.error('Error fetching jobs:', error);
@@ -53,7 +53,7 @@ function SendStatus() {
         const submitStatusForm = await statusForm;
 
         try {
-          const response = await axios.put('http://localhost:8080/application/add-status' ,submitStatusForm); // Replace with your backend API endpoint
+          const response = await axios.put('https://job-posting-eight.vercel.app/application/add-status' ,submitStatusForm); // Replace with your backend API endpoint
           setApplication(response.data); // Set the retrieved jobs data in the state
       } catch (error) {
           console.error('Error fetching jobs:', error);

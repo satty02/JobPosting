@@ -36,7 +36,7 @@ function JobForm() {
         console.log(formData);
 
         try { // Send a POST request to your backend API to add the job data to the database
-            const response = await axios.post('http://localhost:8080/admin/add-jobs', formData);
+            const response = await axios.post('https://job-posting-eight.vercel.app/admin/add-jobs', formData);
 
             // Handle the response as needed (e.g., show a success message)
             console.log('Job created successfully:', response.data);
