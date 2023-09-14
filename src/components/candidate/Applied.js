@@ -7,7 +7,6 @@ function Applied() {
     const {userData} = useUser();
 
     let user = userData && userData.instructor ? userData.instructor.name : '';
-    console.log(user)
 
     const [candidateData, setCandidateData] = useState([]);
 

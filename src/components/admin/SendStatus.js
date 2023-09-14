@@ -8,6 +8,7 @@ function SendStatus() {
     const [sendStatus, setSendStatus] = useState(false);
     const [jobTitle, setJobTitle] = useState('');
     const [jobId, setJobId] = useState('');
+    const [message, setMessage] = useState('')
 
     const [statusForm, setStatusForm] = useState({
       id: '',
@@ -54,9 +55,11 @@ function SendStatus() {
 
         try {
           const response = await axios.put('https://job-posting-eight.vercel.app/application/add-status' ,submitStatusForm); // Replace with your backend API endpoint
-          setApplication(response.data); // Set the retrieved jobs data in the state
+          setApplication(response.data);
+          setMessage('successfully sent') // Set the retrieved jobs data in the state
       } catch (error) {
           console.error('Error fetching jobs:', error);
+          setMessage('Error occured while sending status')
       }
     }
 
@@ -99,6 +102,7 @@ function SendStatus() {
                 <textarea className='border  p-1 m-2 bg-white rounded-lg' name='response' value={statusForm.response} onChange={handleSendStatus} placeholder='Response'/>
               </div>
               <button className='border bg-blue-500 p-1 mx-2 rounded-md'>send</button>
+              <p className='text-center'>{message?message:''}</p>
           </form>
             
             
