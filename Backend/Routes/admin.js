@@ -23,6 +23,7 @@ router.post('/admin/register' , async(req,res)=>{
 })
 
 router.post('/admin/login',async (req, res) => {
+  res.send('hello')
   const {username, password} = req.body;
   if (!username || !password) {
       return res.status(400).json({message: 'Username and password are required'});
