@@ -1,4 +1,4 @@
-# Online Schedule lecture project
+# Job Posting system project
 
 The project has successfully implemented a Job Posting system using a MERN stack architecture, comprising two distinct sections: one for administrators and the other for candidates. To access the admin panel, users are required to log in using their username and password. Additionally, users have the option to register for their respective roles, and a password recovery feature is available through email or username.
 
