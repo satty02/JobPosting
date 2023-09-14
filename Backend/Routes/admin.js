@@ -78,6 +78,7 @@ router.post('/admin/add-jobs', async (req, res) => {
   });
 
   router.get('/admin/get-jobs', async (req, res) => {
+    res.send('hello')
     try {
       // get jobs based on the request data
       const getAllJobs = await Jobs.find({})
