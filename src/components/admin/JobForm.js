@@ -64,7 +64,7 @@ function JobForm() {
     return (
         <div className='p-3  w-[400px]'>
             <button className='font-semibold bg-slate-100 p-2 w-full my-2 text-lg text-center'
-                onClick={handleCreateForm}>Create form</button>
+                onClick={handleCreateForm}>Create form (click here to create)</button>
             {
             openForm && <form onSubmit={handleSubmit}
                 className='flex flex-col w-fit justify-center content-center items-center bg-blue-100'>

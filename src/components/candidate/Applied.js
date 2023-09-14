@@ -13,7 +13,7 @@ function Applied() {
 
     useEffect(() => { // Fetch jobs data from the backend when the component mounts
         fetchJobs();
-    }, []);
+    }, [user]);
 
     const fetchJobs = async () => {
         try {

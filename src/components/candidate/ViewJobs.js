@@ -23,7 +23,7 @@ function ViewJobs() {
 
       useEffect(() => { // Fetch jobs data from the backend when the component mounts
         fetchJobs();
-    }, []);
+    }, [jobs]);
 
     const fetchJobs = async () => {
         try {
