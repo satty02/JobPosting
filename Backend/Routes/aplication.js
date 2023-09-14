@@ -153,8 +153,6 @@ router.post('/applications/submit', async (req, res) => {
 
   router.put('/application/add-status' , async(req,res)=>{
     const {id , status, response} = req.body;
-
-  
     try {
     const findJob = await application.findByIdAndUpdate(id ,{status:status , response:response});
       res.json(findJob );
