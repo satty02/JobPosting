@@ -153,10 +153,16 @@ router.post('/applications/submit', async (req, res) => {
 
   router.put('/application/add-status' , async(req,res)=>{
     const {id , status, response} = req.body;
-    
-    const findJob = await application.findByIdAndUpdate(id ,{status:status , response:response});
 
-    console.log(findJob);
+  
+    try {
+    const findJob = await application.findByIdAndUpdate(id ,{status:status , response:response});
+      res.json(findJob );
+    } catch (error) {
+      // Handle errors
+      console.error('Error creating status:', error);
+      res.status(500).json({ error: 'Internal server error' });
+    }
 
   })
 
